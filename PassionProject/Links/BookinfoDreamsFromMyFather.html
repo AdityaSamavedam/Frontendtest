@@ -18,7 +18,7 @@
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
 
-        <label for "address">Address:</label>
+        <label for="address">Address:</label>
         <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
 
         <label for="creditCard">Credit Card Number:</label>
@@ -27,8 +27,7 @@
         <input type="submit" value="Submit">
     </form>
 
-    <button id="passageGeneratorButton">Passage Generator</button>
-    <div id="passageContainer"></div>
+    <button id="passageGeneratorButton">Click to read a passage from the book</button>
 
     <script>
         // Function to fetch and display book data
@@ -77,7 +76,7 @@
                 });
         }
 
-        // Function to generate the provided text
+        // Function to generate the provided text and display it using document.write
         function generatePassage() {
             const passage = "I looked at Miss Baker, wondering what it was she 'got done.' " +
                 "I enjoyed looking at her. She was a slender, small-breasted girl, " +
@@ -86,14 +85,14 @@
                 "out of a wan, charming, discontented face. It occurred to me now that I had seen her, " +
                 "or a picture of her, somewhere before.";
 
-            // Display the generated passage on the page
-            document.getElementById("passageContainer").textContent = passage;
+            // Display the generated passage using document.write
+            document.write(passage);
         }
 
         // Fetch data for "Dreams From My Father" initially when the page loads
         fetchBookData("DreamsFromMyFather");
 
-        // Add a click event listener to the "Passage Generator" button
+        // Add a click event listener to the "Click to read a passage from the book" button
         document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);
     </script>
 </body>
