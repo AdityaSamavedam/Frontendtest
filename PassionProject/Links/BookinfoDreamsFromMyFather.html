@@ -37,7 +37,7 @@
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
 
-        <label for="address">Address:</label>
+        <label for "address">Address:</label> <!-- Fixed the label syntax -->
         <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
 
         <label for="creditCard">Credit Card Number:</label>
@@ -63,7 +63,7 @@
                         bookTable.textContent = "No books found.";
                     } else {
                         // Check if the returned data corresponds to "Dreams From My Father"
-                        if (data[1].author === "Barack Obama" and data[1].year === "1995") {
+                        if (data[1].author === "Barack Obama" && data[1].year === "1995") {
                             const table = document.createElement("table");
                             table.border = "1";
 
@@ -115,4 +115,5 @@
         // Add a click event listener to the "Click to read a passage from the book" button
         document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);
     </script>
-</
+</body>
+</html>
