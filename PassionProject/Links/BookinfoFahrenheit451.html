@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://g.christianbook.com/g/slideshow/0/000663/main/000663_1_ftc_dp.jpg');
+            background-image: url('https://upload.wikimedia.org/wikipedia/en/d/db/Fahrenheit_451_1st_ed_cover.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -137,7 +137,7 @@
                         bookTable.textContent = "No books found.";
                     } else {
                         // Check if the returned data corresponds to "Fahrenheit 451"
-                        if (data[2].author === "John Steinbeck" && data[2].year === "1939") {
+                        if (data[4].author === "Ray Bradbury" && data[4].year === "1953") {
                             const table = document.createElement("table");
                             table.border = "1";
 
@@ -154,7 +154,7 @@
                             const row = document.createElement("tr");
                             ['author', 'year', 'price', 'genre', 'summary'].forEach(key => {
                                 const cell = document.createElement("td");
-                                cell.textContent = data[2][key];
+                                cell.textContent = data[4][key];
                                 row.appendChild(cell);
                             });
                             table.appendChild(row);
@@ -172,22 +172,20 @@
 
         // Function to generate the provided text and display it in the passage container
         function generatePassage() {
-            const passage = "In the souls of the people, the grapes of wrath are filling and growing heavy, " +
-            "growing heavy for the vintage. This land, this red land, is us; and the flood years and the " +
-            "drought years are us. We have filled the earth and made it our own. We have marked the earth " +
-            "with our madness, and it is ours. They would have to take it from us with guns. And that they " +
-            "will do. And the little screaming fact that sounds through all history: repression works only to " +
-            "strengthen and knit the repressed. The great owners ignored the three cries of history. The land " +
-            "bursting, the cities burning, the people changing. They thought they could buy safety, thought they " +
-            "could swing a little tree while the tempest roared. And child, they were glad, for the world was torn " +
-            "by the wrath of the needy. Child, the world is yours.";
+            const passage = "It was a pleasure to burn. It was a special pleasure to see things eaten, " +
+                "to see things blackened and changed. With the brass nozzle in his fists, with this great python spitting " +
+                "its venomous kerosene upon the world, the blood pounded in his head, and his hands were the hands of " +
+                "some amazing conductor playing all the symphonies of blazing and burning to bring down the tatters " +
+                "and charcoal ruins of history. With his symbolic helmet numbered 451 on his stolid head, and his eyes all " +
+                "orange flame with the thought of what came next, he flicked the igniter and the house jumped up in a gorging " +
+                "fire that burned the evening sky red and yellow and black.";
         
-            // Display the generated passage from "The Grapes Of Wrath" in the passage container
+            // Display the generated passage from "Fahrenheit 451" in the passage container
             document.getElementById("passageContainer").textContent = passage;
         }        
 
-        // Fetch data for "The Grapes Of Wrath" initially when the page loads
-        fetchBookData("The Grapes Of Wrath");
+        // Fetch data for "Fahrenheit 451" initially when the page loads
+        fetchBookData("Fahrenheit451");
 
         // Add a click event listener to the "Click to read a passage from the book" button
         document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);

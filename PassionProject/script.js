@@ -68,7 +68,7 @@ $(function () {
         {
             imageLink: "https://books.google.com/books/content?id=OYtkbGl2j0sC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1MSNBHQqn6MwhmA9ikg0eEko4Zxg&w=1280",
             bookName: "Farenheit 451!",
-            link: "http://127.0.0.1:5500/Links/Bookinfo.html",
+            link: "http://127.0.0.1:4200/Frontendtest/PassionProject/Links/BookinfoFahrenheit451.html",
         },
         {
             imageLink: "https://cdn.kobo.com/book-images/e278c62e-943a-473e-846a-3e19bce5b5d8/1200/1200/False/heart-of-darkness-12.jpg",
