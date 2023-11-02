@@ -16,11 +16,16 @@
             width: 100%;
             height: 100%;
             background-image: url('https://images.penguinrandomhouse.com/cover/9780307383419');
-            background-size: cover;
+            background-size: cover; /* Fit the image to cover the entire element */
             background-repeat: no-repeat;
             background-attachment: fixed;
             opacity: 0.5; /* Adjust the opacity as needed */
             z-index: -1; /* Place it behind other content */
+        }
+        /* Style for the passage container */
+        #passageContainer {
+            position: relative;
+            z-index: 1; /* Place it in front of the background */
         }
     </style>
 </head>
@@ -36,7 +41,7 @@
         <label for="address">Address:</label>
         <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
 
-        <label for="creditCard">Credit Card Number:</label>
+        <label for "creditCard">Credit Card Number:</label>
         <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
 
         <input type="submit" value="Submit">
@@ -94,12 +99,7 @@
 
         // Function to generate the provided text and display it in the passage container
         function generatePassage() {
-            const passage = "I looked at Miss Baker, wondering what it was she 'got done.' " +
-                "I enjoyed looking at her. She was a slender, small-breasted girl, " +
-                "with an erect carriage, which she accentuated by throwing her body backward at the shoulders like a young cadet. " +
-                "Her gray sun-strained eyes looked back at me with polite reciprocal curiosity " +
-                "out of a wan, charming, discontented face. It occurred to me now that I had seen her, " +
-                "or a picture of her, somewhere before.";
+            const passage = "I don’t fault people their suspicions. I learned long ago to distrust my childhood and the stories that shaped it. It was only many years later, after I had sat at my father’s grave and spoken to him through Africa’s red soil, that I could circle back and evaluate these early stories for myself. Or, more accurately, it was only then that I understood that I had spent much of my life trying to rewrite these stories, plugging up holes in the narrative, accommodating unwelcome details, projecting individual choices against the blind sweep of history, all in the hope of extracting some granite slab of truth upon which my unborn children can firmly stand. ";
 
             // Display the generated passage in the passage container
             document.getElementById("passageContainer").textContent = passage;
@@ -109,4 +109,7 @@
         fetchBookData("DreamsFromMyFather");
 
         // Add a click event listener to the "Click to read a passage from the book" button
-        document.getElementById
+        document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);
+    </script>
+</body>
+</html>
