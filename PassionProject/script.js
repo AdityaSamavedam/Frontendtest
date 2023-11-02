@@ -73,7 +73,7 @@ $(function () {
         {
             imageLink: "https://cdn.kobo.com/book-images/e278c62e-943a-473e-846a-3e19bce5b5d8/1200/1200/False/heart-of-darkness-12.jpg",
             bookName: "Heart of Darkness!",
-            link: "http://127.0.0.1:5500/Links/Bookinfo.html",
+            link: "http://127.0.0.1:4200/Frontendtest/PassionProject/Links/BookinfoHeartOfDarkness.html",
         },
         {
             imageLink: "https://m.media-amazon.com/images/I/51MgclnwPvL._SY291_BO1,204,203,200_QL40_FMwebp_.jpg",

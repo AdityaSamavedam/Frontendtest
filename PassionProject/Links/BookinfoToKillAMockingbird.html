@@ -1,30 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
     <style>
-        /* Aesthetic styling for the title */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://g.christianbook.com/g/slideshow/0/000663/main/000663_1_ftc_dp.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             text-align: center;
             font-size: 24px;
             color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .book-table {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .book-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .book-table th, .book-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .book-table th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
+
 <body>
-    <h1>Book Information</h1> <!-- Added title -->
-    <div id="bookTable"></div> <!-- Container for book data -->
-    <form id="myForm">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+    <div class="container">
+        <h1>Book Information</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br>
 
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" placeholder="Enter your address"><br>
 
-        <label for="creditCard">Credit Card Number:</label>
-        <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
+            <label for="creditCard">Credit Card Number:</label>
+            <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br>
 
-        <input type="submit" value="Submit">
-    </form>
+            <input type="submit" value="Submit">
+        </form>
+
+        <button id="passageGeneratorButton">Click to read a passage from the book</button>
+        
+        <div class="book-table" id="bookTable"></div>
+        <div id="passageContainer"></div>
+    </div>
+
     <script>
         // Function to fetch and display book data
         function fetchBookData(title) {
@@ -72,14 +170,22 @@
                 });
         }
 
-        // Fetch data for "To Kill A Mockingbird" initially when the page loads
-        fetchBookData("ToKillAMockingbird");
+        // Function to generate the provided text and display it in the passage container
+        function generatePassage() {
+            const passage = "Atticus, he was real nice. \"Most people are, Scout, when you finally see them.\" " +
+            "He turned out the light and went into Jem's room. " +
+            "He would be there all night, and he would be there when Jem waked up in the morning.";
+        
+            // Display the generated passage from "To Kill A Mockingbird" in the passage container
+            document.getElementById("passageContainer").textContent = passage;
+        }        
 
-        // Add event listener for form submission
-        document.getElementById("myForm").addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevent the default form submission
-            alert("Submitted"); // Display the "Submitted" message
-        });
+        // Fetch data for "To Kill A Mockingbird" initially when the page loads
+        fetchBookData("To Kill A Mockingbird");
+
+        // Add a click event listener to the "Click to read a passage from the book" button
+        document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);
     </script>
 </body>
+
 </html>

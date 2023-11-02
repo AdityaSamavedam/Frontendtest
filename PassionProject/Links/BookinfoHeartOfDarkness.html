@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://images.penguinrandomhouse.com/cover/9780307383419');
+            background-image: url('https://m.media-amazon.com/images/I/51KLMlyGHOL.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -136,8 +136,8 @@
                     if (data.length === 0) {
                         bookTable.textContent = "No books found.";
                     } else {
-                        // Check if the returned data corresponds to "Dreams From My Father"
-                        if (data[1].author === "Barack Obama" && data[1].year === "1995") {
+                        // Check if the returned data corresponds to "Heart Of Darkness"
+                        if (data[5].author === "Joseph Conrad" && data[5].year === "1899") {
                             const table = document.createElement("table");
                             table.border = "1";
 
@@ -154,7 +154,7 @@
                             const row = document.createElement("tr");
                             ['author', 'year', 'price', 'genre', 'summary'].forEach(key => {
                                 const cell = document.createElement("td");
-                                cell.textContent = data[1][key];
+                                cell.textContent = data[5][key];
                                 row.appendChild(cell);
                             });
                             table.appendChild(row);
@@ -172,18 +172,24 @@
 
         // Function to generate the provided text and display it in the passage container
         function generatePassage() {
-            const passage = "I looked at my father's photograph, wondering what it was he saw in the world. " +
-            "I admired him from afar. He was a man of deep convictions, with an upright posture that exuded confidence. " +
-            "His eyes, like windows to his soul, conveyed a sense of wisdom and a passion for change. " +
-            "I often thought about the path he had walked and the impact he had on the world. " +
-            "It occurred to me now that his spirit still lived within me, shaping my own journey.";
-
-            // Display the generated passage in the passage container
+            const passage = "The brown current ran swiftly out of the heart of darkness, bearing us down towards the sea with twice the speed of our upward progress; " +
+            "and Kurtz's life was running swiftly, too, ebbing, ebbing out of his heart into the sea of inexorable time. " +
+            "The manager was very placid; he had no vital anxieties now. " +
+            "He took us both in with a comprehensive and satisfied glance. " +
+            "\"The  scoundrel had reported your approach as lost or dead, and I was a little suspicious of him when he came to me, so I pried out of him all that he knew. " +
+            "He was in a hurry, had no time to spare, could not wait. "
+            "You don't know what I suffer. I had no idea of the contents, but allowed him to take them, " +
+            "as it was as much as my life was worth to interfere with him. "
+            "He struggled with himself, too. I saw it - I heard it. I saw the inconceivable mystery of a soul that knew no restraint, no faith, and no fear, yet struggling blindly with itself. " +
+            "I kept my head pretty well; but when I had him at last stretched on the couch, I wiped my forehead, while my legs shook under me as though I had carried half a ton on my back down that hill. " +
+            "And yet I had only won a --";
+        
+            // Display the generated passage from "Heart Of Darkness" in the passage container
             document.getElementById("passageContainer").textContent = passage;
-        }
+        }        
 
-        // Fetch data for "Dreams From My Father" initially when the page loads
-        fetchBookData("DreamsFromMyFather");
+        // Fetch data for "Heart Of Darkness" initially when the page loads
+        fetchBookData("Heart Of Darkness");
 
         // Add a click event listener to the "Click to read a passage from the book" button
         document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);

@@ -1,30 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Information</title>
     <style>
-        /* Aesthetic styling for the title */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
         h1 {
             text-align: center;
             font-size: 24px;
             color: #333;
+            margin-bottom: 20px;
+        }
+
+        form {
+            text-align: center;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        form input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .book-table {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .book-table table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .book-table th, .book-table td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+
+        .book-table th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
+
 <body>
-        <h1>Book Information</h1> <!-- Added title -->
-        <div id="bookTable"></div> <!-- Container for book data -->
+    <div class="container">
+        <h1>Book Information</h1>
         <form>
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
-    
+            <input type="text" id="name" name="name" placeholder="Enter your name"><br>
+
             <label for="address">Address:</label>
-            <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
-    
+            <input type="text" id="address" name="address" placeholder="Enter your address"><br>
+
             <label for="creditCard">Credit Card Number:</label>
-            <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
-    
+            <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br>
+
             <input type="submit" value="Submit">
         </form>
+
+        <button id="passageGeneratorButton">Click to read a passage from the book</button>
+        
+        <div class="book-table" id="bookTable"></div>
+        <div id="passageContainer"></div>
+    </div>
+
     <script>
         // Function to fetch and display book data
         function fetchBookData(title) {
@@ -72,9 +170,25 @@
                 });
         }
 
+        // Function to generate the provided text and display it in the passage container
+        function generatePassage() {
+            const passage = "I looked across the room at Daisy Buchanan and the green light at the end of her dock. " +
+            "She had an enchanting voice. It was full of money - that was the inexhaustible charm that rose and fell in it, the jingle of it, the cymbals' song of it. " +
+            "I watched her as she laughed and the room seemed to grow brighter around her. " +
+            "Her voice was a deathless song. It was not of the present or the past, but an edge of ecstasy glistened in it. " +
+            "I felt the soft summer air, and the sound of the music from her house floated out to us through the open window. " +
+            "I looked at Daisy, and then back at the green light. It was a green light, minute and far away, that might have been at the end of the dock.";
+
+            // Display the generated passage in the passage container
+            document.getElementById("passageContainer").textContent = passage;
+        }
+
         // Fetch data for "The Great Gatsby" initially when the page loads
-        fetchBookData("TheGreatGatsby");
+        fetchBookData("The Great Gatsby");
+
+        // Add a click event listener to the "Click to read a passage from the book" button
+        document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);
     </script>
-    
 </body>
+
 </html>
