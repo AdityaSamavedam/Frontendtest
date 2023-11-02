@@ -148,7 +148,7 @@ courses: { compsci: {week: 0} }
                 <div class="col-md-6">
                     <div class="contacts-data">
                         <i class="fa fa-paper-plane fa-2x"></i>
-                        <span class="contact-text">TeamSaiga@gmail.com</span>
+                        <span class="contact-text">TeamSaiga4real@gmail.com</span>
                     </div>
                     <div class="contacts-data">
                         <i class="fa fa-phone fa-2x"></i>

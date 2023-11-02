@@ -18,7 +18,7 @@
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
 
-        <label for="address">Address:</label>
+        <label for "address">Address:</label>
         <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
 
         <label for="creditCard">Credit Card Number:</label>
@@ -28,11 +28,12 @@
     </form>
 
     <button id="passageGeneratorButton">Passage Generator</button>
+    <div id="passageContainer"></div>
 
     <script>
         // Function to fetch and display book data
         function fetchBookData(title) {
-            const url = `http://127.0.0.1:8242/api/book/?title=${title}`; // Update the API endpoint with the specific title
+            const url = `http://127.0.0.1:8794/api/book/?title=${title}`; // Update the API endpoint with the specific title
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
@@ -85,8 +86,8 @@
                 "out of a wan, charming, discontented face. It occurred to me now that I had seen her, " +
                 "or a picture of her, somewhere before.";
 
-            // Display the generated passage in a popup alert
-            alert(passage);
+            // Display the generated passage on the page
+            document.getElementById("passageContainer").textContent = passage;
         }
 
         // Fetch data for "Dreams From My Father" initially when the page loads
