@@ -82,27 +82,27 @@ courses: { compsci: {week: 0} }
                         <a href="sumedha.html">
                             <h>Sumedha</h>
                             <button style="border-color: red;">Sumedha</button>
-                            <img src="frontend.jpg" alt="Frontend" width="25%" height="auto">
+                            <img src="/home/aditya/vscode/Frontendtest/PassionProject/projecthome.md" alt="Frontend" width="25%" height="auto">
                         </a>
                         <a href="aditya.html">
                             <h>Aditya</h>
                             <button style="border-color: green;">Aditya</button>
-                            <img src="backend.jpg" alt="Backend" width="25%" height="auto">
+                            <img src="PassionProject/images/backend.jpg" alt="Backend" width="25%" height="auto">
                         </a>
                         <a href="ishraq.html">
                             <h>Ishraq</h>
                             <button style="border-color: blue;">Ishraq</button>
-                            <img src="scrum-master.jpg" alt="Scrum Master" width="25%" height="auto">
+                            <img src="PassionProject/images/scrum-master.jpg" alt="Scrum Master" width="25%" height="auto">
                         </a>
                         <a href="grayson.html">
                             <h>Grayson</h>
                             <button style="border-color: green;">Grayson</button>
-                            <img src="Back-End+Developer2.jpg" alt="Backend" width="25%" height="auto">
+                            <img src="PassionProject/images/Back-End+Developer2.jpg" alt="Backend" width="25%" height="auto">
                         </a>
                         <a href="anthony.html">
                             <h>Anthony</h>
                             <button style="border-color: red;">Anthony</button>
-                            <img src="frontend2.jpg" alt="Frontend" width="25%" height="auto">
+                            <img src="PassionProject/images/frontend2.jpg" alt="Frontend" width="25%" height="auto">
                         </a>
                     </button>
                     </p>
