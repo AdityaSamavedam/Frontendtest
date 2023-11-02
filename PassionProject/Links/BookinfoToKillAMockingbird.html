@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Aesthetic styling for the title */
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Book Information</h1> <!-- Added title -->
+    <div id="bookTable"></div> <!-- Container for book data -->
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
+
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        // Function to fetch and display book data
+        function fetchBookData(title) {
+            const url = `http://127.0.0.1:8794/api/book/?title=${title}`; // Update the API endpoint with the specific title
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    const bookTable = document.getElementById("bookTable");
+                    bookTable.innerHTML = ""; // Clear previous data
+
+                    if (data.length === 0) {
+                        bookTable.textContent = "No books found.";
+                    } else {
+                        // Check if the returned data corresponds to "To Kill A Mockingbird"
+                        if (data[3].author === "Harper Lee" && data[3].year === "1960") {
+                            const table = document.createElement("table");
+                            table.border = "1";
+
+                            // Create table headers based on book properties
+                            const headerRow = document.createElement("tr");
+                            ['author', 'year', 'price', 'genre', 'summary'].forEach(key => {
+                                const th = document.createElement("th");
+                                th.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                                headerRow.appendChild(th);
+                            });
+                            table.appendChild(headerRow);
+
+                            // Populate the table with book data
+                            const row = document.createElement("tr");
+                            ['author', 'year', 'price', 'genre', 'summary'].forEach(key => {
+                                const cell = document.createElement("td");
+                                cell.textContent = data[3][key];
+                                row.appendChild(cell);
+                            });
+                            table.appendChild(row);
+
+                            bookTable.appendChild(table);
+                        } else {
+                            bookTable.textContent = "No books found.";
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
+        }
+
+        // Fetch data for "To Kill A Mockingbird" initially when the page loads
+        fetchBookData("ToKillAMockingbird");
+
+        // Add event listener for form submission
+        document.getElementById("myForm").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            alert("Submitted"); // Display the "Submitted" message
+        });
+    </script>
+</body>
+</html>
