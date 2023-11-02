@@ -35,13 +35,14 @@ courses: { compsci: {week: 0} }
                 </div>
                 <div class="navbar-collapse collapse" id="navbar">
                     <ul class="nav navbar-nav social-list">
-                        <li><a href="https://github.com/nighthawikcoders/student" target="_blank"><i class="fa fa-github fa-2x" title="GitHub" aria-hidden="true"></i>
+                        <li><a href="https://github.com/AdityaSamavedam/Frontendtest
+" target="_blank"><i class="fa fa-github fa-2x" title="GitHub" aria-hidden="true"></i>
                         </a></li>
-                        <li><a href="https://codepen.io/trending" target="_blank"><i class="fa fa-codepen fa-2x" title="Code Pen" aria-hidden="true"></i>
+                        <li><a href="https://codepen.io/teamsaiga" target="_blank"><i class="fa fa-codepen fa-2x" title="Code Pen" aria-hidden="true"></i>
                         </a></li>
-                        <li><a href="https://www.linkedin.com/in/jonathan-limon-a63917280/" target="_blank"><i class="fa fa-linkedin fa-2x" title="LinkedIn" aria-hidden="true"></i>
+                        <li><a href="https://www.linkedin.com/in/team-saiga-4b5155299/" target="_blank"><i class="fa fa-linkedin fa-2x" title="LinkedIn" aria-hidden="true"></i>
                         </a></li>
-                        <li><a href="https://www.facebook.com/ishraq.hossain.948"><i class="fa fa-facebook fa-2x" title="Facebook" aria-hidden="true"></i>
+                        <li><a href="https://www.facebook.com/profile.php?id=61552719104462"><i class="fa fa-facebook fa-2x" title="Facebook" aria-hidden="true"></i>
                         </a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
@@ -122,13 +123,14 @@ courses: { compsci: {week: 0} }
         <div class="container">
             <h2>Where can you find us?</h2>
             <ul class="social-list">
-                <li><a href="https://github.com/nighthawkcoders/student" target="_blank"><i class="fa fa-github fa-3x" title="GitHub" aria-hidden="true"></i>
+                <li><a href="https://github.com/AdityaSamavedam/Frontendtest
+" target="_blank"><i class="fa fa-github fa-3x" title="GitHub" aria-hidden="true"></i>
                 </a></li>
-                <li><a href="https://codepen.io/trending" target="_blank"><i class="fa fa-codepen fa-3x" title="Code Pen" aria-hidden="true"></i>
+                <li><a href="https://codepen.io/teamsaiga" target="_blank"><i class="fa fa-codepen fa-3x" title="Code Pen" aria-hidden="true"></i>
                 </a></li>
-                <li> <a href="https://www.linkedin.com/in/jonathan-limon-a63917280/" target="_blank"><i class="fa fa-linkedin fa-3x" title="LinkedIn" aria-hidden="true"></i>
+                <li> <a href="https://www.linkedin.com/in/team-saiga-4b5155299/" target="_blank"><i class="fa fa-linkedin fa-3x" title="LinkedIn" aria-hidden="true"></i>
                 </a></li>
-                <li> <a href="https://www.facebook.com/ishraq.hossain.948"><i class="fa fa-facebook fa-3x" title="Facebook" aria-hidden="true"></i>
+                <li> <a href="https://www.facebook.com/profile.php?id=61552719104462"><i class="fa fa-facebook fa-3x" title="Facebook" aria-hidden="true"></i>
                 </a></li>
             </ul>
         </div>

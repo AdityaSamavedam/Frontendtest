@@ -13,21 +13,22 @@
 <body>
     <h1>Book Information</h1> <!-- Added title -->
     <div id="bookTable"></div> <!-- Container for book data -->
-    <body>
-        <h1>Book Information</h1> <!-- Added title -->
-        <div id="bookTable"></div> <!-- Container for book data -->
-        <form>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
-    
-            <label for="address">Address:</label>
-            <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
-    
-            <label for="creditCard">Credit Card Number:</label>
-            <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
-    
-            <input type="submit" value="Submit">
-        </form>
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
+
+        <label for="creditCard">Credit Card Number:</label>
+        <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <button id="passageGeneratorButton">Passage Generator</button>
+
     <script>
         // Function to fetch and display book data
         function fetchBookData(title) {
@@ -75,9 +76,24 @@
                 });
         }
 
+        // Function to generate the provided text
+        function generatePassage() {
+            const passage = "I looked at Miss Baker, wondering what it was she 'got done.' " +
+                "I enjoyed looking at her. She was a slender, small-breasted girl, " +
+                "with an erect carriage, which she accentuated by throwing her body backward at the shoulders like a young cadet. " +
+                "Her gray sun-strained eyes looked back at me with polite reciprocal curiosity " +
+                "out of a wan, charming, discontented face. It occurred to me now that I had seen her, " +
+                "or a picture of her, somewhere before.";
+
+            // Display the generated passage in a popup alert
+            alert(passage);
+        }
+
         // Fetch data for "Dreams From My Father" initially when the page loads
         fetchBookData("DreamsFromMyFather");
+
+        // Add a click event listener to the "Passage Generator" button
+        document.getElementById("passageGeneratorButton").addEventListener("click", generatePassage);
     </script>
-    
 </body>
 </html>
