@@ -48,7 +48,7 @@ $(function () {
         {
             imageLink: "https://prodimage.images-bn.com/pimages/9780743273565_p0_v14_s1200x630.jpg",
             bookName: "The Great Gatsby",
-            link: "http://127.0.0.1:4200/Frontendtest/PassionProject/Links/BookinfoTheGreatGatsby.html",
+            link: "https://adityasamavedam.github.io/Frontendtest/PassionProject/Links/BookinfoTheGreatGatsby.html",
         },
         {
             imageLink: "https://images.penguinrandomhouse.com/cover/9780307383419",
