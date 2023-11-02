@@ -40,7 +40,7 @@
         <label for="address">Address:</label>
         <input type="text" id="address" name="address" placeholder="Enter your address"><br><br>
 
-        <label for "creditCard">Credit Card Number:</label>
+        <label for="creditCard">Credit Card Number:</label>
         <input type="text" id="creditCard" name="creditCard" placeholder="Enter your credit card number"><br><br>
 
         <input type="submit" value="Submit">
@@ -52,7 +52,7 @@
     <script>
         // Function to fetch and display book data
         function fetchBookData(title) {
-            const url = `http://127.0.0.1:8794/api/book/?title=${title}`; // Update the API endpoint with the specific title
+            const url = `http://127.0.0.1:8762/api/book/?title=${title}`; // Update the API endpoint with the specific title
             fetch(url)
                 .then(response => response.json())
                 .then(data => {
