@@ -48,22 +48,22 @@ $(function () {
         {
             imageLink: "https://prodimage.images-bn.com/pimages/9780743273565_p0_v14_s1200x630.jpg",
             bookName: "The Great Gatsby",
-            link: "https://adityasamavedam.github.io/Frontendtest//PassionProject/Links/BookinfoTheGreatGatsby",
+            link: "https://adityasamavedam.github.io/Frontendtest/PassionProject/Links/BookinfoTheGreatGatsby",
         },
         {
             imageLink: "https://images.penguinrandomhouse.com/cover/9780307383419",
             bookName: "Dreams From My Father",
-            link: "https://adityasamavedam.github.io/Frontendtest//PassionProject/Links/BookinfoDreamsFromMyFather",
+            link: "https://adityasamavedam.github.io/Frontendtest/PassionProject/Links/BookinfoDreamsFromMyFather",
         },
         {
             imageLink: "https://m.media-amazon.com/images/I/814oeXzxhML._AC_UF350,350_QL50_.jpg",
             bookName: "The Grapes of Wrath!",
-            link: "https://adityasamavedam.github.io/Frontendtest//PassionProject/Links/BookinfoTheGrapesOfWrath",
+            link: "https://adityasamavedam.github.io/Frontendtest/PassionProject/Links/BookinfoTheGrapesOfWrath",
         },
         {
             imageLink: "https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg",
             bookName: "To Kill A Mockingbird!",
-            link: "https://adityasamavedam.github.io/Frontendtest//PassionProject/Links/BookinfoToKillAMockingbird",
+            link: "https://adityasamavedam.github.io/Frontendtest/PassionProject/Links/BookinfoToKillAMockingbird",
         },
         {
             imageLink: "https://books.google.com/books/content?id=OYtkbGl2j0sC&pg=PP1&img=1&zoom=3&hl=en&bul=1&sig=ACfU3U1MSNBHQqn6MwhmA9ikg0eEko4Zxg&w=1280",
